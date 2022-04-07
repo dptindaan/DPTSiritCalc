@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<style>
+	    .fullname, .subject, .myschool, .appname, .copyr{
+	    	text-align: center;
+	    }
+
+	    body {
+			font-family:Garamond      ; 
+		}
+
+		.vertical-center {
+		    padding: 20px 20px;
+		    border-radius: 20px;
+		    display: block;
+		    width: 180px;
+		    margin: 10px auto 0px auto;
+		}
+
+		button {
+		    height:40px;
+		    width:40px;
+		    font-size: 18px;
+		}
+
+		label {
+			height: 30px;
+			width: 170px;
+			display: inline-block;
+			background: white;
+			text-align: center;
+			vertical-align: middle;	
+			font-size: 18px;
+		}
+
+	</style>
+
+	<script>
+	
+		var oper = 0;
+		var oper1 = 0;
+	function one() {
+		
+		var x = document.getElementById('number').textContent;
+	  	document.getElementById('number').innerHTML = x + '1';
+	}
+	function two() {
+		var x = document.getElementById('number').textContent;
+	  	document.getElementById('number').innerHTML = x + '2';
+	}
+	function three() {
+		var x = document.getElementById('number').textContent;
+	  	document.getElementById('number').innerHTML = x + '3';
+	}
+	function four() {
+		var x = document.getElementById('number').textContent;
+	  	document.getElementById('number').innerHTML = x + '4';
+	}
+	function five() {
+		var x = document.getElementById('number').textContent;
+	  	document.getElementById('number').innerHTML = x + '5';
+	}
+	function six() {
+		var x = document.getElementById('number').textContent;
+	  	document.getElementById('number').innerHTML = x + '6';
+	}
+	function seven() {
+		var x = document.getElementById('number').textContent;
+	  	document.getElementById('number').innerHTML = x + '7';
+	}
+	function eigth() {
+		var x = document.getElementById('number').textContent;
+	  	document.getElementById('number').innerHTML = x + '8';
+	}
+	function nine() {
+		var x = document.getElementById('number').textContent;
+	  	document.getElementById('number').innerHTML = x + '9';
+	}
+	function zero() {
+		var x = document.getElementById('number').textContent;
+	  	document.getElementById('number').innerHTML = x + '0';
+	}
+	function plus() {
+		oper1= document.getElementById('number').textContent;
+	  	 oper = 1;
+	  	document.getElementById('number').innerHTML = "";
+
+	}
+	function minus() {
+		oper1 = document.getElementById('number').textContent;
+	  	 oper = 2;
+	  	document.getElementById('number').innerHTML = "";
+	}
+	function divide() {
+		oper1 = document.getElementById('number').textContent;
+	  	oper = 3;
+	  	document.getElementById('number').innerHTML = "";
+	}
+	function multiply() {
+		 oper1 = document.getElementById('number').textContent;
+	  	 oper = 4;
+	  	document.getElementById('number').innerHTML = "";
+	}
+	function modulo() {
+		 oper1 = document.getElementById('number').textContent;
+	  	 oper = 5;
+	  	document.getElementById('number').innerHTML = "";
+	}
+	function cleared() {
+		oper1 = document.getElementById('number').textContent;
+		oper1 = 6;
+	  	document.getElementById('number').innerHTML = '';
+	}
+	
+	function equals() {
+		var oper2 = document.getElementById('number').textContent;
+		var result = 0.0;
+	  	
+	  	if(oper == 1)
+	  		result = parseFloat(oper1) + parseFloat(oper2);
+	  	else if(oper == 2)
+	  		result = parseFloat(oper1) - parseFloat(oper2);
+	  	else if(oper == 3)
+	  		result = parseFloat(oper1) / parseFloat(oper2);
+	  	else if(oper == 4)
+	  		result = parseFloat(oper1) * parseFloat(oper2);
+	  	else if(oper == 5)
+	  		result = parseFloat(oper1) % parseFloat(oper2);
+
+	  	
+	  	document.getElementById('number').innerHTML = result;
+	}
+	</script>
+    <meta charset="utf-8">
+    <script src=""></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>SimpleCalc</title>   
+
+  </head>
+ <body style="background-color: Thistle;  ">
+
+	<div class="box">		
+
+		<div class="subject">
+		  	Advanced System Architecture
+		</div>
+		<div class="subject">
+		  	University of the Cordilleras
+		</div>
+		<div class="appname">
+			Simple Arithmetic Calculator (SiritCalc)
+		</div>
+		<div class="vertical-center"> 
+			<label id = "number" for="number">  </label>			
+		</div>
+
+		<div class="vertical-center">
+			<button type="button" onclick="one()"> 1</button>
+			<button type="button" onclick="two()"> 2 </button>
+			<button type="button" onclick="three()"> 3 </button>
+			<button type="button" onclick="plus()"> + </button>
+			<div style="height: 5px;"></div>
+			<button type="button" onclick="four()"> 4 </button>
+			<button type="button" onclick="five()"> 5 </button>
+			<button type="button" onclick="six()"> 6 </button>
+			<button type="button" onclick="minus()"> - </button>
+			<div style="height: 5px;"></div>
+			<button type="button" onclick="seven()"> 7 </button>
+			<button type="button" onclick="eigth()"> 8 </button>
+			<button type="button" onclick="nine()"> 9 </button>
+			<button type="button" onclick="divide()"> / </button>
+			<div style="height: 5px;"></div>
+			<button type="button" onclick="zero()"> 0 </button>
+			<button type="button" onclick="multiply()"> * </button>
+			<button type="button" onclick="modulo()"> % </button>
+			<button type="button" onclick="equals()"> = </button>
+			<div style="height: 5px;"></div>		
+			<button type="button" onclick="cleared()"> c </button>
+			<button type="button" onclick="backspace()"> x </button>
+		</div>	
+		<div class="fullname">
+		  	DANDY P. TINDAAN
+		</div>
+		<div class="myschool">
+		  	Benguet State University
+		</div>
+		<div class="copyr">
+			copyright 2022
+		</div>
+	</div>
+</body>
+</html>
